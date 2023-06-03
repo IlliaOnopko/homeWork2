@@ -1,16 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head lang="uk">
-    <meta charset="UTF-8">
-    <title>My Page</title>
+	<meta charset="UTF-8">
+	<title>My Page</title>
 
 
-    <link rel="stylesheet" type="text/css" href="main.css" />
+	<link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+<div class="badge">
+	<h2 class="badge__title">Buy List</h2>
+	<p>Created by:</p>
+	<h3>Illia Onopko</h3>
+</div>
+<div class="badge badge-print">
+	<p>Created by:</p>
+	<h3>Illia Onopko</h3>
+</div>
+
+<div class="content-wrapper">
+	<div class="content-block" id="product-list">
+		<div class="row add">
+			<div>
+				<input class="add-field" type="text" placeholder="Назва товару"/>
+				<button class="btn-add">Додати</button>
+			</div>
+		</div>
+		<div class="row">
+			<span><s>Помідори</s></span>
+			<div>
+				<button class="btn-amount decrement hidden">-</button>
+				<span class="amount-value">4</span>
+				<button class="btn-amount increment hidden">+</button>
+			</div>
+
+				<div>
+					<button class="btn-purchase-status" data-tooltip="Change status to 'not purchased'">Не куплено</button>
+				</div>
+		</div>
+		<div class="row">
+			<span>Печиво</span>
+			<div>
+				<button class="btn-amount decrement" data-tooltip="Decrement item count"><span>-</span></button>
+				<span class="amount-value">2</span>
+
+				<button class="btn-amount increment" data-tooltip="Increment item count"><span>+</span></button>
+			</div>
+
+			<div>
+				<button class="btn-purchase-status" data-tooltip="Change status to 'purchased'">Куплено</button>
+				<button class="btn-remove-item" data-tooltip="Remove item">&#10005;</button>
+			</div>
+		</div>
+		<div class="row">
+			<input type="text"/>
+			<div>
+				<button class="btn-amount decrement" disabled  data-tooltip="The count can't be <1">-</button>
+				<span class="amount-value">1</span>
+
+				<button class="btn-amount increment" data-tooltip="Increment item count">+</button>
+			</div>
+
+			<div>
+				<button class="btn-purchase-status" data-tooltip="Change status to 'purchased'">Куплено</button>
+				<button class="btn-remove-item" data-tooltip="Remove item">&#10005;</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-block" id="stats">
+		<div class="row">
+			<h1>Залишилося</h1>
+		</div>
+		<div class="row">
+    <span class="product-item">
+     Печиво
+     <span class="amount">2</span>
+    </span>
+			<span class="product-item">
+     Сир
+     <span class="amount">1</span>
+       </span>
+		</div>
+		<div class="row">
+			<h1>Куплено</h1>
+		</div>
+		<div class="row">
+    <span class="product-item">
+     <s>Помідори</s>
+     <span class="amount">2</span>
+       </span>
+
+		</div>
+
+	</div>
+</div>
 </body>
 </html>
